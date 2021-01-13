@@ -14,7 +14,7 @@ int checkforit(int arr[9][9])
 			}
 		}
 	}
-	return c;
+return c;
 }
 int validInput(int arr[9][9])
 {
