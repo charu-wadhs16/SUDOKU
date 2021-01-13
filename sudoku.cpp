@@ -2,7 +2,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 int checkforit(int arr[9][9])
-{   int c=0;
+{   
+	int c=0;
 	for (int i = 0; i < 9; i++) 
 	{
 		for (int j = 0; j < 9; j++)
@@ -39,24 +40,24 @@ int checkRepetition(int arr[9][9], int m, int n, int x)
 		   return 0;
 		}
    }
-	for (int k = 0; k <9; k++)
-	{
+   for (int k = 0; k <9; k++)
+   {
 		if (arr[k][n] == x)
 		{
 			return 0;
 		}
-	}
-	int R = m - (m % 3), C = n - (n % 3);
+    }
+    int R = m - (m % 3), C = n - (n % 3);
     for (int i = 0; i < 3; i++)
+    {
+	for (int j = 0; j < 3; j++)
 	{
-		for (int j = 0; j < 3; j++)
-		{
-			if (arr[i + R][j +C] == x)
-			{
-			return 0;
-			}
-		}
+	   if (arr[i + R][j +C] == x)
+	   {
+	    return 0;
+	   }
 	}
+     }
 return 1;	
 }
 int Suduko(int arr[9][9], int m, int n)
@@ -74,17 +75,17 @@ int Suduko(int arr[9][9], int m, int n)
 	{
 	return Suduko(arr, m, n + 1);
 	}
-    for (int x = 1; x <10; x++) 
+        for (int x = 1; x <10; x++) 
 	{
-		if (checkRepetition(arr, m, n, x)) 
-		{
-			arr[m][n] = x;
-			if (Suduko(arr, m, n + 1))
-			{
-				return 1;
-		    }
-		}
-		arr[m][n] = 0;
+	if (checkRepetition(arr, m, n, x)) 
+	{
+	  arr[m][n] = x;
+	  if (Suduko(arr, m, n + 1))
+	  {
+	   return 1;
+	  }
+	}
+	arr[m][n] = 0;
 	}
 return 0;
 }
