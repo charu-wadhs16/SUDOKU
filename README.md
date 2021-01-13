@@ -1,26 +1,27 @@
-# Sudoku
-Sudoku:
+# SUDOKU C++
+
+# Sudoku:
 
 Sudoku is a puzzle game designed for a single player, much like a crossword puzzle. The puzzle itself is nothing more than a grid of little boxes called cells.
 It is a simple project built in C++ language.
 
-Input:
+# Input:
 
 Given a partially filled 9×9 2D array arr[9][9]
 
-Output:
+# Output:
 
 Solved Sudoku
 
-Edge case:
+# Edge case:
 
 Error message is displayed if user enters invalid input or if sudoku is completely filled.
 
-How to play?
+# How to play?
 
 A Sudoku puzzle consists of 81 cells which are divided into nine columns, rows and regions. The task is now to place the numbers from 1 to 9 into the empty cells in such a way that in every row, column and 3×3 region each number appears only once.
 
-How to run the code?
+# How to run the code?
 
 For that we just need a compiler supporting C++ e.g. GCC installed on our system and compile it using cmd or we can use any online C++ compiler.
 
