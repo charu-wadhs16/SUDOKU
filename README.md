@@ -25,7 +25,8 @@ A Sudoku puzzle consists of 81 cells which are divided into nine columns, rows a
 
 For that we just need a compiler supporting C++ e.g. GCC installed on our system and compile it using cmd or we can use any online C++ compiler.
 
-Functions used:
+# Functions used:
+
 checkforit();- returns 1 if sudoku is partially filled else return 0.
 
 validInput();-returns 1 if entered numbers are within range 0 to 9
